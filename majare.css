@@ -1,161 +1,206 @@
-/* Reset some default styles */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply a global font */
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #e0f7fa, #fff);
     color: #333;
+    line-height: 1.6;
 }
 
 /* Header styles */
 header {
-    background-color: #007bff;
-    padding: 10px 0;
+    background: #007bff;
     color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-nav .logo a {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: white;
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
     text-decoration: none;
 }
 
-nav .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-nav .nav-links li a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-nav .nav-links li a:hover {
-    color: #ffdd57;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #ffdd57;
+    transition: width 0.3s ease;
 }
 
-/* Main container styles */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Main container */
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease;
 }
 
-h1 {
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
 }
 
+/* Paragraphs */
 p {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Example reviews section */
-.example-reviews {
-    margin-bottom: 30px;
-}
-
+/* Example reviews */
 .example-reviews ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
 .example-reviews li {
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    justify-content: space-between;
 }
 
 .copy-button {
-    background-color: #28a745;
-    color: white;
+    background: #28a745;
+    color: #fff;
     border: none;
-    padding: 8px 15px;
-    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .copy-button:hover {
-    background-color: #218838;
+    background: #218838;
 }
 
-/* Map section styles */
-.map-section {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.map-container {
+/* Map section */
+.map-section .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: none;
     margin-bottom: 10px;
 }
 
 /* Google review button */
 .google-review-button {
     display: inline-block;
-    background-color: #ff6347; /* Tomato color */
+    background-color: #ff6347;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1.1em;
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
 }
 
 .google-review-button:hover {
-    background-color: #e55347;
+    background: #e55347;
 }
 
-/* Confirmation section styles */
-.confirmation-section {
-    text-align: center;
-}
-
+/* WhatsApp Button */
 .whatsapp-button {
-    background-color: #25d366;
+    background: #25d366;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 1em;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    margin-top: 10px;
 }
 
 .whatsapp-button:hover {
-    background-color: #128c7e;
+    background: #128c7e;
 }
 
-/* Footer styles */
+/* Footer */
 footer {
     background-color: #007bff;
-    padding: 10px;
     color: white;
+    padding: 12px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .example-reviews li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
