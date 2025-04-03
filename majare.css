@@ -1,0 +1,161 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a global font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    padding: 10px 0;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .nav-links li a:hover {
+    color: #ffdd57;
+}
+
+/* Main container styles */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Example reviews section */
+.example-reviews {
+    margin-bottom: 30px;
+}
+
+.example-reviews ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.example-reviews li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.copy-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #218838;
+}
+
+/* Map section styles */
+.map-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.map-container {
+    margin-bottom: 10px;
+}
+
+/* Google review button */
+.google-review-button {
+    display: inline-block;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.google-review-button:hover {
+    background-color: #e55347;
+}
+
+/* Confirmation section styles */
+.confirmation-section {
+    text-align: center;
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
